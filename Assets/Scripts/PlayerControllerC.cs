@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Data;
 using UnityEngine;
 using MySqlConnector;
 
-public class PlayerControllerB : MonoBehaviour
+public class PlayerControllerC : MonoBehaviour
 {
     private string connStr = "server=172.16.2.26;user id=tateno;password=ae21215926;database=tateno";
     private float fetchInterval = 0.5f;
@@ -30,7 +30,7 @@ public class PlayerControllerB : MonoBehaviour
             try
             {
                 conn.Open();
-                string sql = "select x,y from pos where id=1";
+                string sql = "select x,y from pos where id=22503022";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 using (var reader = cmd.ExecuteReader())
                 {
